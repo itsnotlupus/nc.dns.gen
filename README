@@ -8,3 +8,16 @@ Current configuration files generated:
 - hosts.conf : follows the /etc/hosts format. only encode static IPs, doesn't know about forwarders, or wildcards, or translate.
 - dnsmasq.conf : suitable to use with dnsmasq. Limited forwarder support, no support for translate.
 - named.conf and db.bit : meant for use with bind9. support all (?) legacy features. probably buggy.
+
+Dependencies:
+
+- namecoind ( https://github.com/vinced/namecoin )
+- a valid bitcoin.conf file under ~/.namecoin/
+- node.js ( http://nodejs.org )
+
+To use:
+
+node index.js
+
+By default, files are generated under the conf/ subdirectory.
+You can edit index.js to change that.
