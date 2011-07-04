@@ -1,0 +1,10 @@
+
+This is a simple node.js script that grabs the namecoin DB and converts it into various configuration files.
+
+Note that this is only parsing the "legacy specification" for now, and that there are limitation tied to use some conf. files.
+
+Current configuration files generated:
+
+- hosts.conf : follows the /etc/hosts format. only encode static IPs, doesn't know about forwarders, or wildcards, or translate.
+- dnsmasq.conf : suitable to use with dnsmasq. Limited forwarder support, no support for translate.
+- named.conf and db.bit : meant for use with bind9. support all (?) legacy features. probably buggy.
